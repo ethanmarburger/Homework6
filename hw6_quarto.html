@@ -393,13 +393,13 @@ The following object is masked from 'package:purrr':
 <pre><code>List of 10
  $ url        : chr "https://newsapi.org/v2/everything?q=apple&amp;from=2014&amp;to=2024-10-15&amp;sortBy=relevancy&amp;apiKey=08daecb0bc2c4de6a6de13133cbe1217"
  $ status_code: int 200
- $ headers    :List of 16
+ $ headers    :List of 14
   ..- attr(*, "class")= chr [1:2] "insensitive" "list"
  $ all_headers:List of 1
  $ cookies    :'data.frame':    0 obs. of  7 variables:
  $ content    : raw [1:71817] 7b 22 73 74 ...
- $ date       : POSIXct[1:1], format: "2024-10-17 00:55:02"
- $ times      : Named num [1:6] 0 0.27 0.29 0.33 0.425 ...
+ $ date       : POSIXct[1:1], format: "2024-10-17 01:07:43"
+ $ times      : Named num [1:6] 0 0.181 0.203 0.238 0.627 ...
   ..- attr(*, "names")= chr [1:6] "redirect" "namelookup" "connect" "pretransfer" ...
  $ request    :List of 7
   ..- attr(*, "class")= chr "request"
@@ -496,22 +496,24 @@ Caused by warning in `author == author_name`:
 </div>
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(articles1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 13 × 5
+<pre><code># A tibble: 15 × 5
    author        title                             description publishedAt url  
    &lt;chr&gt;         &lt;chr&gt;                             &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;
  1 Gizmodo Deals Amazon Targets the Best Laptop i… Apple hate… 2024-10-04… http…
  2 Gizmodo Deals Forget Bose and Sonos, Amazon Sl… And to thi… 2024-10-03… http…
- 3 Gizmodo Deals Price error or not, these AirTag… Amazon spa… 2024-10-07… http…
- 4 Gizmodo Deals One Day After Prime Day, Amazon … A 40% redu… 2024-10-10… http…
- 5 Gizmodo Deals If You’ve Already Bought AirPods… It seems t… 2024-10-06… http…
- 6 Gizmodo Deals The MacBook Air is Selling At Ha… Now is the… 2024-10-05… http…
+ 3 Gizmodo Deals One Day After Prime Day, Amazon … A 40% redu… 2024-10-10… http…
+ 4 Gizmodo Deals Amazon Crushes iPad Prices by 40… A 40% redu… 2024-10-09… http…
+ 5 Gizmodo Deals The MacBook Air is Selling At Ha… Now is the… 2024-10-05… http…
+ 6 Gizmodo Deals iPad 9: Amazon Slashes Price Aga… Amazon is … 2024-10-07… http…
  7 Jay Peters    Figma’s AI-powered app generator… Figma’s AI… 2024-09-24… http…
  8 Kyle Barr     Apple Finally Releases iPadOS 18… M4 iPad Pr… 2024-10-04… http…
- 9 Kyle Barr     The M4 MacBook Pros Are So Close… The latest… 2024-10-07… http…
-10 Kyle Barr     The Next iPhone Could Arrive Ear… Plus, the … 2024-10-02… http…
-11 Kyle Barr     You Should Update Your iPhone to… We’re gett… 2024-09-16… http…
-12 Gizmodo Deals iPad 10: Apple Would Never Do It… A very pop… 2024-10-07… http…
-13 Kyle Barr     Should You Upgrade to the iPhone… The iPhone… 2024-09-18… http…</code></pre>
+ 9 Gizmodo Deals Amazon is clearing out stock wit… Dive into … 2024-10-01… http…
+10 Kyle Barr     Apple Pulls iPadOS 18 From M4 iP… Some peopl… 2024-09-18… http…
+11 Gizmodo Deals Forget Black Friday: Apple’s M2 … Amazon is … 2024-09-29… http…
+12 Kyle Barr     The Next iPhone Could Arrive Ear… Plus, the … 2024-10-02… http…
+13 Kyle Barr     You Should Update Your iPhone to… We’re gett… 2024-09-16… http…
+14 Gizmodo Deals Apple Clears Out AirTag Stock fo… AirTags ar… 2024-10-05… http…
+15 Kyle Barr     Should You Upgrade to the iPhone… The iPhone… 2024-09-18… http…</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -527,14 +529,17 @@ Caused by warning in `author == author_name`:
 </div>
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(articles2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 5
+<pre><code># A tibble: 8 × 5
   author       title                               description publishedAt url  
   &lt;chr&gt;        &lt;chr&gt;                               &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;
 1 Wes Davis    The next iPhone SE may lose the ho… Apple is r… 2024-10-01… http…
 2 Wes Davis    HTC announces the Vive Focus Visio… HTC’s Vive… 2024-09-18… http…
-3 Joe Tilleli  Prime Day May Be Over But These Ap… Get an ind… 2024-10-10… http…
-4 Florence Ion Siri May Not Get Its Apple Intelli… The iPhone… 2024-09-23… http…
-5 Florence Ion iPhone 16 Pro Review: Apple Intell… There is s… 2024-09-18… http…</code></pre>
+3 Joe Tilleli  Bring the Apple iPad Mini into You… Save over … 2024-10-07… http…
+4 Joe Tilleli  Prime Day May Be Over But These Ap… Get an ind… 2024-10-10… http…
+5 Florence Ion Siri May Not Get Its Apple Intelli… The iPhone… 2024-09-23… http…
+6 Joe Tilleli  Looking for AirPods Alternatives? … Amazon has… 2024-09-19… http…
+7 Florence Ion iPhone 16 Review-in-Progress: Now … The iPhone… 2024-09-18… http…
+8 Joe Tilleli  The Prime Day Price of the Apple M… Get the 25… 2024-10-10… http…</code></pre>
 </div>
 </div>
 <p><strong>4) With one of your objects, summarize the name of the source for each article. That is, find a one-way contingency table for this information.</strong></p>
@@ -544,7 +549,7 @@ Caused by warning in `author == author_name`:
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Gizmodo Deals    Jay Peters     Kyle Barr 
-            7             1             5 </code></pre>
+            9             1             5 </code></pre>
 </div>
 </div>
 <p><strong>5) For each of your returned data objects, turn the publishedAt column into a date column using the lubridate package (see the PARSE DATE-TIMES section of the cheat sheet!). Then sort the two data frames, each by their new parsed date published column. Finally, create a new variable called pub_diff that is the difference in time between the articles’ published dates (use lag() with mutate()). Save the modifications as new data frames.</strong></p>
@@ -575,21 +580,21 @@ Gizmodo Deals    Jay Peters     Kyle Barr
 <div class="cell-output cell-output-stdout">
 <pre><code>$publishedAt
 $publishedAt$mean
-[1] "2024-10-01"
+[1] "2024-09-30"
 
 $publishedAt$sd
-[1] 7.573571
+[1] 7.770518
 
 $publishedAt$median
-[1] "2024-10-04"
+[1] "2024-10-03"
 
 
 $pub_diff
 $pub_diff$mean
-Time difference of 2 days
+Time difference of 1.714286 days
 
 $pub_diff$sd
-[1] 2.522625
+[1] 1.772811
 
 $pub_diff$median
 Time difference of 1 days</code></pre>
@@ -607,24 +612,24 @@ Time difference of 1 days</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>$publishedAt
 $publishedAt$mean
-[1] "2024-09-26"
+[1] "2024-09-28"
 
 $publishedAt$sd
-[1] 9.460444
+[1] 9.88144
 
 $publishedAt$median
-[1] "2024-09-23"
+[1] "2024-09-27"
 
 
 $pub_diff
 $pub_diff$mean
-Time difference of 5.5 days
+Time difference of 3.142857 days
 
 $pub_diff$sd
-[1] 4.041452
+[1] 3.078342
 
 $pub_diff$median
-Time difference of 6.5 days</code></pre>
+Time difference of 3 days</code></pre>
 </div>
 </div>
 </section>
